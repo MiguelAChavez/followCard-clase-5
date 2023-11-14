@@ -1,6 +1,6 @@
 import { useState } from "react";
 import "./followCard.css";
-function FollowCard({ Usuario, nombre, siguiendo }) {
+function FollowCard({ Usuario, siguiendo, children }) {
   const [isSiguiendo, setSiguiendo] = useState(siguiendo);
   const handleClick = () => {
     setSiguiendo(!isSiguiendo);
@@ -11,11 +11,11 @@ function FollowCard({ Usuario, nombre, siguiendo }) {
       <header className="followCard-header">
         <img
           src={`https://unavatar.io/${Usuario}`}
-          alt={`avatar de ${nombre}`}
+          alt={`avatar de ${children}`}
           className="followCard-avatar"
         />
         <div className="followCard-info">
-          <strong>{nombre}</strong>
+          <strong>{children}</strong>
           <span className="followCard-userName">@{Usuario}</span>
         </div>
       </header>

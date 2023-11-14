@@ -11,9 +11,10 @@ function App() {
           <FollowCard
             key={user.Usuario}
             Usuario={user.Usuario}
-            nombre={user.nombre}
             siguiendo={user.siguiendo}
-          ></FollowCard>
+          >
+            {user.nombre}
+          </FollowCard>
         ))}
       </section>
     </>
