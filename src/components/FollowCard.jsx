@@ -6,6 +6,9 @@ function FollowCard({ Usuario, siguiendo, children }) {
     setSiguiendo(!isSiguiendo);
   };
   const texto = isSiguiendo ? "siguiendo" : "Seguir";
+  const clase = !isSiguiendo
+    ? "followCard-button"
+    : "followCard-button siguiendo";
   return (
     <article className="followCard">
       <header className="followCard-header">
@@ -20,8 +23,9 @@ function FollowCard({ Usuario, siguiendo, children }) {
         </div>
       </header>
       <aside>
-        <button className="followCard-button" onClick={handleClick}>
-          {texto}
+        <button className={clase} onClick={handleClick}>
+          <span className="text">{texto}</span>
+          <span className="dejarSeguir">Dejar de seguir</span>
         </button>
       </aside>
     </article>

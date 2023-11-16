@@ -41,3 +41,28 @@
 .followCard-button:hover {
     opacity: .8;
 }
+
+.followCard-button.siguiendo {
+    min-width: 130px;
+    color: #cacaca;
+    border: 1px solid rgb(78, 78, 78);
+    background: transparent;
+}
+
+.followCard-button.siguiendo:hover {
+    background-color: #e1000029;
+    color: #f84646;
+    border-color: #f84646;
+}
+
+.followCard-button.siguiendo:hover .text {
+    display: none;
+}
+
+.followCard-button.siguiendo:hover .dejarSeguir {
+    display: block;
+}
+
+.dejarSeguir {
+    display: none;
+}
